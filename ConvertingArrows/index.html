@@ -52,14 +52,15 @@
         // }
         getValueFromId(id) = () => {document.getElementById(id).value};
 
-        function setBackgroundColorById(id, color){
-            document.getElementById(id).style = "background-color: " + color;
-        }
-        setBackgroundColorById(id, color) = () => document.getElementById(id).style = 
+        // function setBackgroundColorById(id, color){
+        //     document.getElementById(id).style = "background-color: " + color;
+        // }
+        const whatever = (id, color) => {document.getElementById(id).style = "background-color: " + color};
 
-        function mouseOverFunction(el){
-            el.style = "background-color: black";
-        }
+        // function mouseOverFunction(el){
+        //     el.style = "background-color: black";
+        // }
+        const something = (el) => {el.style = "background-color: black"};
     </script>
 </body>
 </html>
