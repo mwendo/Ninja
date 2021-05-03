@@ -11,14 +11,22 @@ class Unit extends Card {
         this.power = power;
         this.res = res;
     }
-    attack(target) {
+    attack = (target) => {
         target.res -= this.power;
-        if(target.res < 0) {
-            console.log(`${target.name} died!`) }
+        if(target.res < 0){
+            console.log(`${target.name} died!`)}
+        }
+    // attack(target) {
+    //     target.res -= this.power;
+    //     if(target.res < 0) {
+    //         console.log(`${target.name} died!`) }
+    // }
+    cardInfo = () => {
+        console.log(`power: ${this.power}, reslience: ${this.res}`)
     }
-    cardInfo() {
-        console.log(`power: ${this.power}, resilience: ${this.res}`)
-    }
+    // cardInfo() {
+    //     console.log(`power: ${this.power}, resilience: ${this.res}`)
+    // }
 }
 
 class Effect extends Card {
@@ -29,7 +37,7 @@ class Effect extends Card {
         this.magnitude = magnitude;
     }
 
-    play(target) {
+    play = (target) => {
         if(this.stat == "resilience"){
             target.res += this.magnitude;
         }
@@ -38,6 +46,14 @@ class Effect extends Card {
         }
     }
 
+    // play(target) {
+    //     if(this.stat == "resilience"){
+    //         target.res += this.magnitude;
+    //     }
+    //     else{
+    //         target.power += this.magnitude;
+    //     }
+    // }
 }
 
 const red_belt_ninja = new Unit ("Red Belt Ninja", 3, 3, 4);
